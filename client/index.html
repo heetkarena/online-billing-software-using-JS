@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Billing Software</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>👕 Online Billing Software</h1>
+    <div class="spacer">
+    <button id="addProductBtn">+ Add New Stock</button>
+    <button id="viewProductBtn">view Products</button>
+    <!-- <button id="InvoiceListBtn">Invoice List</button> -->
+  </header>
+
+  <div class="main-content">
+  
+    <div class="card">
+      <h2>📊 Revenue Dashboard</h2>
+      <revenue-dashboard id="revenue-dashboard"></revenue-dashboard>
+    </div>
+
+    <div class="card">
+      <h2>🧾 Create Invoice</h2>
+      <invoice-creator id="invoice-creator"></invoice-creator>
+    </div>
+
+    <div class="card">
+      <h2>📄 Invoice List</h2>
+      <invoice-list id="invoice-list"></invoice-list>
+    </div>
+  </div>
+
+  <!-- Modal overlay -->
+  <div class="modal" id="addProductModal">
+    <add-product-form id="add-product-form"></add-product-form>
+  </div>
+
+  <div class="modal" id="viewProductModal">
+    <product-list id="product-list"></product-list>
+  </div>
+
+  <!-- <div class=""modal" id="invoiceListModal">
+    <invoice-list id="invoice-list"></invoice-list>
+  </div> -->
+
+  <script type="module" src="./components/AddProductForm.js"></script>
+  <script type="module" src="./components/ProductList.js"></script>
+  <script type="module" src="./components/RevenueDashboard.js"></script>
+  <script type="module" src="./components/InvoiceCreator.js"></script>
+  <script type="module" src="./components/InvoiceList.js"></script>
+  <script type="module" src="./components/app.js"></script>
+
+  <script>
+    const addProductBtn = document.getElementById("addProductBtn");
+    const viewProductBtn = document.getElementById("viewProductBtn");
+    // const invoiceListBtn = document.getelementbyId("InvoiceListBtn");
+
+    const viewmodal = document.getElementById("viewProductModal");
+    const addmodal= document.getElementById("addProductModal");
+    // const invoicemodal = document.getElementById("invoiceListModal");
+    const mainContent = document.querySelector(".main-content");
+
+    addProductBtn.addEventListener("click", () => {
+      addmodal.classList.add("active");
+      mainContent.classList.add("blurred");
+    });
+
+    viewProductBtn.addEventListener("click", () => {
+        viewmodal.classList.add("active");
+        mainContent.classList.add("blurred");
+    });
+
+    // invoiceListBtn.addEventListener("click", () => {
+    //     invoicemodal.classList.add("active");
+    //     mainContent.classList.add("blurred");
+    // });
+
+    document.addEventListener("closeAddProductForm", () => {
+      addmodal.classList.remove("active");
+      mainContent.classList.remove("blurred");
+    });
+
+    document.addEventListener("closeProductList", () => {
+        viewmodal.classList.remove("active");
+        mainContent.classList.remove("blurred");
+    });
+
+    // document.addEventListener("closeInvoiceList", () => {
+    //     invoicemodal.classList.remove("active");
+    //     mainContent.classList.remove("blurred");
+    // });
+  </script>
+</body>
+</html>
