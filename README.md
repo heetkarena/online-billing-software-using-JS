@@ -1,6 +1,6 @@
 # Online Billing Software
 
-A complete billing and inventory management system for clothing businesses built with **pure JavaScript** (Node.js + Vanilla JS).
+A complete billing and inventory management system for small businesses built with **pure JavaScript** (Node.js + Vanilla JS).
 
 ## 🚀 Features
 
