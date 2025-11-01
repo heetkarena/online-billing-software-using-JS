@@ -34,23 +34,24 @@ A complete billing and inventory management system for small businesses built wi
 
 ### Installation Steps
 1. **Clone the repository**
-   ```bash
+    ```bash
    git clone https://github.com/heetkarena/online-billing-software-using-JS.git
 
 
 ### 🏗️ Project Structure
 
-clothing-billing-software/
-├── server/
-│   ├── models/          # Data models (Product, Invoice)
-│   ├── routes/          # API routes
-│   ├── services/        # Database service
-│   └── server.js        # Entry point
-├── client/
-│   ├── components/      # Web Components
-│   └── index.html       # Main application
-├── database.sqlite      # SQLite database (auto-created)
-└── README.md
+    ```bash
+    online-billing-software/
+    ├── server/
+    │   ├── models/          # Data models (Product, Invoice)
+    │   ├── routes/          # API routes
+    │   ├── services/        # Database service
+    │   └── server.js        # Entry point
+    ├── client/
+    │   ├── components/      # Web Components
+    │   └── index.html       # Main application
+    ├── database.sqlite      # SQLite database (auto-created)
+    └── README.md
 
 ### 🙏 Acknowledgments
 
