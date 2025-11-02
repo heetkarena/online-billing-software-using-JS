@@ -40,7 +40,6 @@ A complete billing and inventory management system for small businesses built wi
 
 ### 🏗️ Project Structure
 
-    ```bash
     online-billing-software/
     ├── server/
     │   ├── models/          # Data models (Product, Invoice)
